@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Vibecoding Portfolio | Искусство Кода в Потоке</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Портфолио, построенное на философии 'вайбкодинга'. Исследуйте проекты, где код встречается с искусством, а разработка становится медитативным процессом." />
+    <meta name="keywords" content="vibecoding, портфолио, разработка, react, frontend, философия кода, состояние потока" />
+    <meta name="author" content="Vibecoding" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://example.com/" />
+    <meta property="og:title" content="Vibecoding Portfolio | Искусство Кода в Потоке" />
+    <meta property="og:description" content="Исследуйте проекты, где код встречается с искусством, а разработка становится медитативным процессом." />
+    <meta property="og:image" content="https://example.com/og-image.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://example.com/" />
+    <meta property="twitter:title" content="Vibecoding Portfolio | Искусство Кода в Потоке" />
+    <meta property="twitter:description" content="Исследуйте проекты, где код встречается с искусством, а разработка становится медитативным процессом." />
+    <meta property="twitter:image" content="https://example.com/og-image.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ff8c42" />
+    <meta name="msapplication-TileColor" content="#121212" />
+    <meta name="theme-color" content="#121212" />
+
+    <!-- Preconnect and Preload -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="modulepreload" href="/index.tsx" />
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'base-900': '#121212',
+              'base-800': '#1a1a1a',
+              'base-700': '#242424',
+              'neutral-50': '#ffffff',
+              'neutral-200': '#e0e0e0',
+              'neutral-400': '#a0a0a0',
+              'neutral-500': '#808080',
+              'accent': '#ff8c42',
+              'accent-secondary': '#42aaff',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            animation: {
+              'pulse-slow': 'pulse-slow 8s ease-in-out infinite',
+              'fade-in': 'fade-in 0.8s ease-in-out',
+            },
+            keyframes: {
+              'pulse-slow': {
+                '0%, 100%': { transform: 'scale(1)', opacity: '0.1' },
+                '50%': { transform: 'scale(1.2)', opacity: '0.15' },
+              },
+              'fade-in': {
+                'from': { opacity: '0' },
+                'to': { opacity: '1' },
+              },
+            },
+          },
+        },
+        plugins: [
+            tailwind.plugins.typography,
+        ],
+      }
+    </script>
+    <style>
+      html { scroll-behavior: smooth; }
+      /* High Contrast Mode Styles */
+      html[data-contrast="high"] {
+        --color-bg: #000000;
+        --color-text: #ffffff;
+        --color-accent: #ffff00; /* High-vis yellow */
+      }
+      html[data-contrast="high"] body {
+        background-color: var(--color-bg) !important;
+        color: var(--color-text) !important;
+      }
+      html[data-contrast="high"] a, 
+      html[data-contrast="high"] h1,
+      html[data-contrast="high"] h2,
+      html[data-contrast="high"] h3,
+      html[data-contrast="high"] h4,
+      html[data-contrast="high"] h5,
+      html[data-contrast="high"] button {
+        color: var(--color-text) !important;
+      }
+      html[data-contrast="high"] .animated-gradient-text {
+         background: var(--color-text) !important;
+         -webkit-background-clip: text !important;
+         -webkit-text-fill-color: transparent !important;
+      }
+      html[data-contrast="high"] [class*="bg-"] {
+        background-color: var(--color-bg) !important;
+      }
+      html[data-contrast="high"] [class*="border-"],
+      html[data-contrast="high"] [class*="ring-"] {
+        border-color: var(--color-accent) !important;
+        outline-color: var(--color-accent) !important;
+      }
+       html[data-contrast="high"] .high-contrast-accent {
+        color: var(--color-accent) !important;
+        background-color: var(--color-accent) !important;
+        color: var(--color-bg) !important;
+      }
+      html[data-contrast="high"] .high-contrast-accent-text {
+        color: var(--color-accent) !important;
+      }
+      html[data-contrast="high"] .hidden-in-contrast {
+        display: none !important;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom": "https://aistudiocdn.com/react-dom@^19.2.0"
+  }
+}
+</script>
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Vibecoding Portfolio",
+  "url": "https://example.com/",
+  "author": {
+    "@type": "Person",
+    "name": "Vibecoding Creator"
+  },
+  "description": "Портфолио, построенное на философии 'вайбкодинга'.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://example.com/#blog?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+</head>
+  <body class="bg-base-900">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
